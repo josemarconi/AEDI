@@ -25,7 +25,7 @@ Dessa forma, o algoritimo inicia com uma função para ler o arquivo de matrizes
 
 | Função                 |  Funcionalidade                                                                                                                           |
 | -----------------------| ----------------------------------------------------------------------------------------------------------------------------------------- |
-|  `Moving`          | a função tem como objetivo caminhar nas matrizes coletando os valores das posições e somando-os trocando os valores por -1, sendo sempre a primeira posição escolhida a primeira posição da matriz (matriz[0][0]). O caminho é escolhido por uma ordem predefinida de condições, em que a prioridade é sempre pegar o maior valor. Em caso de valores iguais há sempre uma ordem de prioridade para caminhar, sendo: [Diagonal Direita -> Baixo -> Direita -> Diagonal Esquerda -> Esquerda] porém, caso esteja na ultima linha, ele apenas caminhará para a direita. Dentro da função também é somado o valor total percorrido de cada matriz e também o valor total da soma de todas as matrizes.                                        |
+|  `Moving`          | a função tem como objetivo caminhar nas matrizes coletando os valores das posições e somando-os trocando os valores por -1, sendo sempre a primeira posição escolhida a primeira posição da matriz ( matriz[0][0] ). O caminho é escolhido por uma ordem predefinida de condições, em que a prioridade é sempre pegar o maior valor. Em caso de valores iguais há sempre uma ordem de prioridade para caminhar, sendo: [Diagonal Direita -> Baixo -> Direita -> Diagonal Esquerda -> Esquerda] porém, caso esteja na ultima linha, ele apenas caminhará para a direita. Dentro da função também é somado o valor total percorrido de cada matriz e também o valor total da soma de todas as matrizes.                                        |
 |  `Show`                | Mostrar a matriz na tela. É chamada antes de caminhar na matriz, e após caminhar para mostrar o caminho percorrido.                       |
 
 </p>
@@ -61,7 +61,6 @@ Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento 
 </div>
 
 <p> </p>
-
 
 <a style="color:black" href="mailto:jmarconiadm@outlook.com?subject=[GitHub]%20Source%20Dynamic%20Lists">
 ✉️ <i>jmarconiadm@outlook.com</i>
