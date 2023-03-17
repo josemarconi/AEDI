@@ -21,7 +21,7 @@ O código trata de ler um número N de matrizes de tamanho M x M de um arquivo e
 |  `2`                   | Ápos descer uma linha, não é permitido subir novamente;                                           |
 |  `3`                   | É autorizado andar em diagonais, para baixo, direita e esquerda;                                  |
 
-Dessa forma, o algoritimo inicia com uma função, (<i>Readi>), para ler o arquivo de matrizes e armazená-las em um vector. As demais funções são chamadas dentro dessa função também, sendo elas:
+Dessa forma, o algoritimo inicia com uma função, (<i>Readi<i>), para ler o arquivo de matrizes e armazená-las em um vector. As demais funções são chamadas dentro dessa função também, sendo elas:
 
 | Função                 |  Funcionalidade                                                                                                                           |
 | -----------------------| ----------------------------------------------------------------------------------------------------------------------------------------- |
