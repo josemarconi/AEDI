@@ -1,7 +1,6 @@
 # Algoritimo Guloso: Caminhando na Matriz
 
-<div style="display: inline-block;">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/> 
+<div style="display: inline-block;">    
 <img align="center" height="20px" width="60px" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/> 
 <img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg"/> 
 </a> 
@@ -20,6 +19,9 @@ O código trata de ler um número N de matrizes de tamanho M x M de um arquivo e
 |  `1`                   | Não se pode retornar a mesma casa já passada;                                                     |
 |  `2`                   | Ápos descer uma linha, não é permitido subir novamente;                                           |
 |  `3`                   | É autorizado andar em diagonais, para baixo, direita e esquerda;                                  |
+|  `4`                   | Quando chegar a última linha, só é permitido andar para a direita.                                |
+
+<p> </p>
 
 <p align="justify">
 As bibliotecas utilizadas no código são:
@@ -34,27 +36,40 @@ As bibliotecas utilizadas no código são:
 |  `cctype`                                                                                                                  |
 |  `algorithm`                                                                                                               |
 
+<p> </p>
 
 <p align="justify">
 Dessa forma, o algoritimo inicia com uma função, (<i>Read</i>), para ler o arquivo de matrizes e armazená-las em um vector:
 
-<img align="center" height="20px" width="80px" src="https://files.fm/f/nyv2us79u\"/>
+<p> </p>
 
 As demais funções são chamadas dentro dessa função também, sendo elas:
 
-| Função                 |  Funcionalidade                                                                                                                           |
-| -----------------------| ----------------------------------------------------------------------------------------------------------------------------------------- |
-|  `Moving`          | <p align="justify"> A função tem como objetivo caminhar nas matrizes coletando os valores das posições e somando-os trocando os valores por -1, sendo sempre a primeira posição escolhida a primeira posição da matriz ( matriz[0][0] ). O caminho é escolhido por uma ordem predefinida de condições, em que a prioridade é sempre pegar o maior valor. Em caso de valores iguais há sempre uma ordem de prioridade para caminhar, sendo: [Diagonal Direita -> Baixo -> Direita -> Diagonal Esquerda -> Esquerda] porém, caso esteja na ultima linha, ele apenas caminhará para a direita. Dentro da função também é somado o valor total percorrido de cada matriz e também o valor total da soma de todas as matrizes.                                        |
-|  `Show`                | Mostrar a matriz na tela. É chamada antes de caminhar na matriz, e após caminhar para mostrar o caminho percorrido.                       |
+| Função                                                                                                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  `Moving`                                                                                                                                                                                 |
+|  `Show`                                                                                                                                                                                   |
+  
+<p align="justify"> Função <i>Moving</i> é salvo o valor da primeira posição da matriz (matriz[0][0]) e o valor da posição passa a ser -1, que indica a casa pela qual o algoritimo passou. Após definida a posição inicial, o algoritimo segue a movimentação entrando em algumas condições, seguindo as regras impostas. Tendo como prioridade de movimentação sempre a casa com o maior valor. Em caso de número iguais, é utilizado as condições em forma da seguinte prioridade: Diagonal Direita -> Direita -> Baixo -> Diagonal Esquerda -> Esquerda, caso chegue a última linha da matriz, ele só caminhará para a direita. A iteração do algoritimo termina quando o valor das variáveis <i>row</i> e <i>columns</i> for igual ao tamanho da matriz - 1, linha e coluna respectivamente.
 
-  
-  
+|                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  `row`    ->  A cada linha descida, aumenta o valor da variável em 1;                                                                                                                     |
+|  `columns` ->  Direita e Diagonal Direita somado 1; Esquerda e Diagonal Esquerda subtraido 1.                                                                                             |
+
+
+<p align="justify"> Dentro da função ainda é realizada as somas. O valor de cada casa é armazenada em uma variável[<i>Consumed</i>] e semrpe somada ao valor da casa anterior, dando a soma total percorrida na matriz. Há também a soma dos valores totais, em que pega o valor total anterior e soma com os da matrizes seguintes, dando o valor total percorrido em todas as matrizes. 
+
 </p>
+
+<p align="justify"> Função <i>Show</i>, é utilizada apenas para impirmir a matriz na tela, é chamada assim que a matriz é transportada para o vector, e após percorrer o caminho. 
 
 <p align="justify">
-<span color="red">Observação:</span> Note no código que o arquivo input.data está sendo direcionado para uma pasta chamada dataset. Ao clonar o repositório ou baixar o zip essa pasta pode não ser contemplada como parte da hierarquia da aplicação, então, não esqueça de criá-la antes de iniciar a execução. Caso contrário, um erro de arquivo não encontrado surgirá como retorno.
-</p>
+<span color="red">Observação 1:</span> Note no código que o arquivo input.data está sendo direcionado para uma pasta chamada dataset. Ao clonar o repositório ou baixar o zip essa pasta pode não ser contemplada como parte da hierarquia da aplicação, então, não esqueça de criá-la antes de iniciar a execução. Caso contrário, um erro de arquivo não encontrado surgirá como retorno.
 
+<p align="justify">
+<span color="red">Observação 2:</span> Dado a forma que foi feita a função <i>Moving</i>, ela só funcionara para casos de matrizes quadráticas. 
+</p>
 
 # Compilação e Execução
 
