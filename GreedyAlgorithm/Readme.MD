@@ -23,34 +23,21 @@ O código trata de ler um número N de matrizes de tamanho M x M de um arquivo e
 
 <p> </p>
 
-<p align="justify">
-As bibliotecas utilizadas no código são:
-
-|   Bibliotecas                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------- |
-|  `iostream`                                                                                                                |
-|  `fstream`                                                                                                                 |
-|  `vector`                                                                                                                  |
-|  `string`                                                                                                                  |
-|  `sstream`                                                                                                                 |
-|  `cctype`                                                                                                                  |
-|  `algorithm`                                                                                                               |
-
 <p> </p>
 
 <p align="justify">
-Dessa forma, o algoritimo inicia com uma função, (<i>Read</i>), para ler o arquivo de matrizes e armazená-las em um vector:
+Dessa forma, o algoritimo inicia com uma função, (<i>Read</i>), para ler o arquivo (<i>input.data</i>) onde estão as matrizes para armazená-las em um vector. As funções se encontram todas no arquivo mordomo.cpp.
 
 <p> </p>
 
-As demais funções são chamadas dentro dessa função também, sendo elas:
+As demais funções são chamadas dentro dessa função(<i>Read</i>) também, sendo elas:
 
 | Função                                                                                                                                                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  `Moving`                                                                                                                                                                                 |
 |  `Show`                                                                                                                                                                                   |
   
-<p align="justify"> Função <i>Moving</i> -> é salvo o valor da primeira posição da matriz (matriz[0][0]) e o valor da posição passa a ser -1, que indica a casa pela qual o algoritimo passou. Após definida a posição inicial, o algoritimo segue a movimentação entrando em algumas condições, seguindo as regras impostas. Tendo como prioridade de movimentação sempre a casa com o maior valor. Em caso de número iguais, é utilizado as condições em forma da seguinte prioridade: Diagonal Direita -> Direita -> Baixo -> Diagonal Esquerda -> Esquerda, caso chegue a última linha da matriz, ele só caminhará para a direita. A iteração do algoritimo termina quando o valor das variáveis <i>row</i> e <i>columns</i> for igual ao tamanho da matriz - 1, linha e coluna respectivamente.
+<p align="justify"> Função <i>Moving</i> é salvo o valor da primeira posição da matriz (matriz[0][0]) e o valor da posição passa a ser -1, que indica a casa pela qual o algoritimo passou (linhas 20 e 28). Após definida a posição inicial, o algoritimo segue a movimentação entrando em algumas condições, seguindo as regras impostas (linhas 24 a 121). Tendo como prioridade de movimentação sempre a casa com o maior valor. Em caso de número iguais, é utilizado as condições em forma da seguinte prioridade: Diagonal Direita -> Direita -> Baixo -> Diagonal Esquerda -> Esquerda, caso chegue a última linha da matriz, ele só caminhará para a direita (linhas 59 a 67). A iteração do algoritimo termina quando o valor das variáveis <i>row</i> e <i>columns</i> for igual ao tamanho da matriz - 1, linha e coluna respectivamente (linhas 117 a 120).
 
 |                                                                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,17 +45,19 @@ As demais funções são chamadas dentro dessa função também, sendo elas:
 |  `columns` ->  Direita e Diagonal Direita somado 1; Esquerda e Diagonal Esquerda subtraido 1.                                                                                             |
 
 
-<p align="justify"> Dentro da função ainda é realizada as somas. O valor de cada casa é armazenada em uma variável[<i>Consumed</i>] e semrpe somada ao valor da casa anterior, dando a soma total percorrida na matriz. Há também a soma dos valores totais, em que pega o valor total anterior e soma com os da matrizes seguintes, dando o valor total percorrido em todas as matrizes. 
+<p align="justify"> Dentro da função ainda é realizada as somas. O valor de cada casa é armazenada em uma variável[<i>Consumed</i>] e sempre somada ao valor da casa anterior, dando a soma total percorrida na matriz e mostra na tela. Há também a soma dos valores totais, em que pega o valor total anterior e soma com os da matrizes seguintes, dando o valor total percorrido em todas as matrizes (linha 125). 
 
 </p>
 
-<p align="justify"> Função <i>Show</i> -> é utilizada apenas para impirmir a matriz na tela, é chamada assim que a matriz é transportada para o vector, e após percorrer o caminho. 
+<p align="justify"> Função <i>Show</i>, é utilizada apenas para impirmir a matriz na tela, é chamada assim que a matriz é transportada para o vector, e após percorrer o caminho. 
+
+# Observações
 
 <p align="justify">
-<span color="red">Observação 1:</span> Note no código que o arquivo input.data está sendo direcionado para uma pasta chamada dataset. Ao clonar o repositório ou baixar o zip essa pasta pode não ser contemplada como parte da hierarquia da aplicação, então, não esqueça de criá-la antes de iniciar a execução. Caso contrário, um erro de arquivo não encontrado surgirá como retorno.
+<span color="red"> 1:</span> Note no código que o arquivo input.data está sendo direcionado para uma pasta chamada dataset. Ao clonar o repositório ou baixar o zip essa pasta pode não ser contemplada como parte da hierarquia da aplicação, então, não esqueça de criá-la antes de iniciar a execução. Caso contrário, um erro de arquivo não encontrado surgirá como retorno.
 
 <p align="justify">
-<span color="red">Observação 2:</span> Dado a forma que foi feita a função <i>Moving</i>, ela só funcionara para casos de matrizes quadráticas. 
+<span color="red">2:</span> Dado a forma que foi feita a função <i>Moving</i>, ela só funcionara para casos de matrizes quadráticas. 
 </p>
 
 # Compilação e Execução
