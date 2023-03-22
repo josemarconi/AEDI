@@ -13,7 +13,6 @@
 <p align="justify">
 O código trata de ler um número N de matrizes de tamanho M x M de um arquivo e caminhar sobre elas sempre adquirindo os maiores valores possíveis dentro das regras impostas para movimentação, sendo elas:
 
-
 |                        |  Regras                                                                                           |
 | -----------------------| ------------------------------------------------------------------------------------------------- |
 |  `1`                   | Não se pode retornar a mesma casa já passada;                                                     |
@@ -30,14 +29,14 @@ Dessa forma, o algoritimo inicia com uma função, (<i>Read</i>), para ler o arq
 
 <p> </p>
 
-As demais funções são chamadas dentro dessa função(<i>Read</i>) também, sendo elas:
+As demais funções são chamadas dentro dessa função(<i>Read</i>), sendo elas:
 
 | Função                                                                                                                                                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  `Moving`                                                                                                                                                                                 |
 |  `Show`                                                                                                                                                                                   |
   
-<p align="justify"> Função <i>Moving</i> é salvo o valor da primeira posição da matriz (matriz[0][0]) e o valor da posição passa a ser -1, que indica a casa pela qual o algoritimo passou (linhas 20 e 28). Após definida a posição inicial, o algoritimo segue a movimentação entrando em algumas condições, seguindo as regras impostas (linhas 24 a 121). Tendo como prioridade de movimentação sempre a casa com o maior valor. Em caso de número iguais, é utilizado as condições em forma da seguinte prioridade: Diagonal Direita -> Direita -> Baixo -> Diagonal Esquerda -> Esquerda, caso chegue a última linha da matriz, ele só caminhará para a direita (linhas 59 a 67). A iteração do algoritimo termina quando o valor das variáveis <i>row</i> e <i>columns</i> for igual ao tamanho da matriz - 1, linha e coluna respectivamente (linhas 117 a 120).
+<p align="justify"> Na função <i>Moving</i> é salvo o valor da primeira posição da matriz (matriz[0][0]) e o valor da posição passa a ser -1, que indica a casa pela qual o algoritimo passou (linhas 20 e 28). Após definida a posição inicial, o algoritimo segue a movimentação entrando em algumas condições, seguindo as regras impostas (linhas 24 a 121). Tendo como prioridade de movimentação sempre a casa com o maior valor. Em caso de número iguais, é utilizado as condições em forma da seguinte prioridade: Diagonal Direita -> Direita -> Baixo -> Diagonal Esquerda -> Esquerda, caso chegue a última linha da matriz, ele só caminhará para a direita (linhas 59 a 67). A iteração do algoritimo termina quando o valor das variáveis <i>row</i> e <i>columns</i> for igual ao tamanho da matriz - 1, linha e coluna respectivamente (linhas 117 a 120).
 
 |                                                                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,11 +44,11 @@ As demais funções são chamadas dentro dessa função(<i>Read</i>) também, se
 |  `columns` ->  Direita e Diagonal Direita somado 1; Esquerda e Diagonal Esquerda subtraido 1.                                                                                             |
 
 
-<p align="justify"> Dentro da função ainda é realizada as somas. O valor de cada casa é armazenada em uma variável[<i>Consumed</i>] e sempre somada ao valor da casa anterior, dando a soma total percorrida na matriz e mostra na tela. Há também a soma dos valores totais, em que pega o valor total anterior e soma com os da matrizes seguintes, dando o valor total percorrido em todas as matrizes (linha 125). 
+<p align="justify"> Dentro da função ainda é realizada as somas. O valor de cada casa é armazenada em uma variável[<i>Consumed</i>] e sempre somada ao valor da casa anterior, dando a soma total percorrida na matriz, isso tudo feito quando se entra em alguma condição(<i>If, Else If, Else</i>). Há também a soma dos valores totais, em que pega o valor total anterior e soma com os da matrizes seguintes, dando o valor total percorrido em todas as matrizes (linha 125). 
 
 </p>
 
-<p align="justify"> Função <i>Show</i>, é utilizada apenas para impirmir a matriz na tela, é chamada assim que a matriz é transportada para o vector, e após percorrer o caminho. 
+<p align="justify"> Na função <i>Show</i>, é utilizada apenas para impirmir a matriz na tela, é chamada assim que a matriz é transportada para o vector, e após percorrer o caminho. 
 
 # Observações
 
@@ -59,6 +58,17 @@ As demais funções são chamadas dentro dessa função(<i>Read</i>) também, se
 <p align="justify">
 <span color="red">2:</span> Dado a forma que foi feita a função <i>Moving</i>, ela só funcionara para casos de matrizes quadráticas. 
 </p>
+
+
+# Especificações do Dispositivo utilizado
+
+|                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------- |
+|  `Processador`         -> Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz   1.99 GHz                                              |
+|  `RAM Instalada`       -> 16.0 GB (utilizável: 15.8 GB)                                                                    |
+|  `Tipo de Sistema`     -> Sistema operacional de 64 bits, processador baseado em x64                                       |
+|  `Sistema Operacional` -> Edição Windows 10 Home Single Language, versão 21H2                                              |
+
 
 # Compilação e Execução
 
